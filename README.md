@@ -1,6 +1,6 @@
 # The-Design-Shop
 
-Dies ist das bewertete Projekt "The Design Shop" Projekt von Supercode.
+Dies ist das bewertete Projekt "The Design Shop" Projekt von Supercode. Das Layout wurde hauptsächlich mit CSS Grid erstellt.
 
 Verwendete Technologien sind:
 
