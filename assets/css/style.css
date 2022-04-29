@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&display=swap');
+
+/* ================================ 
+        GENERAL STYLES
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Karla', sans-serif;
+    color: #323A45;
+    margin: 0 10%;
+}
+
+/* ================================ 
+        OVERALL STYLES
+================================ */
+a {
+    color: #323A45;
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================================ 
+        HEADER STYLES
+================================ */
+header {
+    transition: 0.5s;
+}
+
+header>div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vh 0;
+}
+
+header div:first-of-type ul {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+header a:hover {
+    color: #848484;
+}
+
+/******** mobile menu ********/
+#bigMac {
+    display: none;
+}
+
+#bigMac span {
+    display: block;
+    background-color: #323A45;
+    width: 30px;
+    height: 5px;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+#mobileMenu {
+    height: 0;
+    background-color: #efefef;
+}
+
+#mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 2;
+}
+
+/* ================================ 
+        MAIN STYLES
+================================ */
+/******** GRID BRUDI ********/
+main>section {
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "big big big"
+        "small1 small2 small3"
+        "small4 small5 small6"
+    ;
+    gap: 25px;
+}
+
+.bigImage {
+    grid-area: big;
+}
+
+.smallImage1 {
+    grid-area: small1;
+}
+
+.smallImage2 {
+    grid-area: small2;
+}
+
+.smallImage3 {
+    grid-area: small3;
+}
+
+.smallImage4 {
+    grid-area: small4;
+}
+
+.smallImage5 {
+    grid-area: small5;
+}
+
+.smallImage6 {
+    grid-area: small6;
+}
+
+/******** Item descriptions ********/
+.description {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 0;
+}
+
+.leftDescription p:last-of-type {
+    color: #848484;
+}
+
+/******** Image hover ********/
+.hoverContainer {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #f7f7f7;
+}
+
+.hoverContainer:hover .overlay {
+    opacity: 0.7;
+}
+
+/* ================================ 
+        FOOTER STYLES
+================================ */
+.footerLine {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    font-size: 1.4rem;
+}
+
+.footerLine>* {
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.footerLine h2 {
+    margin-bottom: 5vh;
+}
+
+.footerLine div {
+    line-height: 1.5;
+}
+
+.footerLine a {
+    font-weight: 600;
+}
+
+.footerLine div:first-of-type {
+    width: 140%;
+}
+
+.footerLine div:nth-of-type(2) {
+    width: 70%;
+}
+
+.footerLine div:nth-of-type(3) p:last-of-type {
+    font-style: italic;
+}
+
+footer>p {
+    font-size: 1.4rem;
+    color: #848484;
+    margin: 2vh 0;
+}
+
+/* ================================ 
+        MEDIA QUERIES
+================================ */
+@media only screen and (max-width: 576px) {
+    header div:first-of-type>ul {
+        display: none;
+    }
+
+    #bigMac {
+        display: block;
+    }
+
+    main>section {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "big"
+            "small1"
+            "small2"
+            "small3"
+            "small4"
+            "small5"
+            "small6"
+        ;
+        gap: 25px;
+    }
+
+    .footerLine {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    header div:first-of-type>ul {
+        display: none;
+    }
+
+    #bigMac {
+        display: block;
+    }
+
+    main>section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "big big"
+            "small1 small2"
+            "small3 small4"
+            "small5 small6"
+        ;
+        gap: 15px;
+    }
+
+    .footerLine {
+        flex-wrap: wrap;
+    }
+}
